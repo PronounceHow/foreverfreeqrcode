@@ -437,6 +437,80 @@
   </div>
 </main>
 
+<!-- Explainer Section -->
+<section class="explainer">
+  <div class="explainer-inner">
+
+    <div class="explainer-hero">
+      <h2>Other sites give you a free QR code, then charge you to keep it working.<br/>Ours just works. Forever.</h2>
+      <p>No subscriptions. No accounts. No surprises. Just scan it — today, next year, in ten years.</p>
+    </div>
+
+    <div class="explainer-grid">
+
+      <div class="explainer-card">
+        <div class="card-icon">🔗</div>
+        <h3>Why do QR codes expire?</h3>
+        <p>Most QR code generators create <strong>dynamic</strong> codes — the QR image doesn't link to your destination directly. Instead it links to <em>their</em> server, which redirects to your URL. When you stop paying, their server stops redirecting, and your QR code breaks.</p>
+      </div>
+
+      <div class="explainer-card">
+        <div class="card-icon">✅</div>
+        <h3>What makes ours different?</h3>
+        <p>Every QR code generated here is <strong>static</strong> — your data is encoded directly into the image itself, in the pattern of black and white squares. There is no redirect, no middleman, no server involved. The code works as long as the image exists.</p>
+      </div>
+
+      <div class="explainer-card">
+        <div class="card-icon">🔒</div>
+        <h3>Your data never leaves your device</h3>
+        <p>The QR code is generated entirely in your browser using JavaScript. Nothing you type is sent to any server. We have no database, no user accounts, and nothing to sell you. The site exists purely as a free utility.</p>
+      </div>
+
+      <div class="explainer-card">
+        <div class="card-icon">📐</div>
+        <h3>When should you use a dynamic QR code?</h3>
+        <p>Dynamic codes make sense if you need to <strong>change the destination URL</strong> after printing (e.g. packaging printed at scale) or need <strong>scan analytics</strong>. For everything else — your website, WiFi, business card, event page — a static code is simpler, free, and more reliable.</p>
+      </div>
+
+    </div>
+
+    <div class="faq">
+      <h2>Frequently asked questions</h2>
+
+      <details>
+        <summary>Will my QR code really never expire?</summary>
+        <p>Yes. A static QR code is just an image encoding your data. As long as you keep the image, it works. ForeverFreeQRCode.org doesn't host or serve your QR code — you download it and own it completely.</p>
+      </details>
+
+      <details>
+        <summary>Do I need to create an account?</summary>
+        <p>No. There are no accounts, no sign-ups, no email required. Open the page, generate your code, download it.</p>
+      </details>
+
+      <details>
+        <summary>Why did my QR code from another site expire?</summary>
+        <p>It was a dynamic QR code. The image encoded a short URL on that company's server (e.g. <em>qr.example.com/abc123</em>), which redirected to your real URL. When the company's free tier ended or you stopped paying, that redirect stopped working — even though your actual destination (your website, your page) is perfectly fine.</p>
+      </details>
+
+      <details>
+        <summary>Can I put a logo on my QR code?</summary>
+        <p>Yes — use the "Logo / Icon" upload in the Customize section. The QR code automatically uses a higher error correction level when a logo is added, so it remains scannable even with part of the pattern covered.</p>
+      </details>
+
+      <details>
+        <summary>What file formats can I download?</summary>
+        <p>PNG (best for most uses — emails, documents, web) and SVG (vector format, scales to any size without quality loss — ideal for print).</p>
+      </details>
+
+      <details>
+        <summary>Is there a limit on how many QR codes I can generate?</summary>
+        <p>No limit at all. Generate as many as you need.</p>
+      </details>
+    </div>
+
+  </div>
+</section>
+
 <!-- Footer -->
 <footer>
   <p>
@@ -755,6 +829,121 @@
     border-radius: 8px;
     padding: 0.6rem 0.75rem;
     line-height: 1.5;
+  }
+
+  /* ── Explainer ── */
+  .explainer {
+    background: white;
+    border-top: 1px solid #e2e8f0;
+    padding: 3rem 1rem;
+  }
+  .explainer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .explainer-hero {
+    text-align: center;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .explainer-hero h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1e293b;
+    line-height: 1.35;
+    margin-bottom: 0.75rem;
+  }
+  .explainer-hero p {
+    font-size: 1.05rem;
+    color: #64748b;
+  }
+  .explainer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  .explainer-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .card-icon {
+    font-size: 1.8rem;
+  }
+  .explainer-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1e293b;
+  }
+  .explainer-card p {
+    font-size: 0.9rem;
+    color: #475569;
+    line-height: 1.6;
+  }
+  .faq {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .faq h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.25rem;
+  }
+  details {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  details[open] {
+    border-color: #bae6fd;
+  }
+  summary {
+    padding: 1rem 1.25rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1e293b;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8fafc;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: '+';
+    font-size: 1.2rem;
+    color: #0ea5e9;
+    font-weight: 400;
+  }
+  details[open] summary::after {
+    content: '−';
+  }
+  details p {
+    padding: 1rem 1.25rem;
+    font-size: 0.9rem;
+    color: #475569;
+    line-height: 1.7;
+    background: white;
+    border-top: 1px solid #e2e8f0;
+  }
+
+  @media (max-width: 768px) {
+    .explainer-grid {
+      grid-template-columns: 1fr;
+    }
+    .explainer-hero h2 {
+      font-size: 1.25rem;
+    }
   }
 
   /* ── Footer ── */
