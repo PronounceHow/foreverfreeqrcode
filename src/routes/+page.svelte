@@ -56,7 +56,7 @@
   function buildQRData(): string {
     switch (activeTab) {
       case 'website':
-        return websiteUrl || 'https://example.com';
+        return websiteUrl || 'https://umotu.com';
       case 'text':
         return plainText || 'Hello World';
       case 'wifi':
