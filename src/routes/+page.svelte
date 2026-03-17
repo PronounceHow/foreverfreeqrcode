@@ -20,7 +20,7 @@
   let qrSize = 300;
 
   // Tab data
-  let websiteUrl = 'https://';
+  let websiteUrl = 'https://umotu.com';
   let plainText = '';
   let wifiSsid = '';
   let wifiPassword = '';
